@@ -8,7 +8,15 @@ To write a program to predict the price of the house and number of occupants in 
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
+1.Data Loading & Preparation: The California Housing dataset is loaded and converted into a DataFrame, where "AveOccup" and "HousingPrice" are chosen as the dependent variables (targets), and the rest (excluding "AveOccup") are used as features (independent variables).
 
+2.Data Splitting: The data is split into training and testing sets using an 80-20 split.
+
+3.Feature Scaling: Both the feature data (X) and target variables (Y) are standardized using StandardScaler to improve the performance of the gradient-based learning model.
+
+4.Model Training: A stochastic gradient descent (SGD) regressor is wrapped in a MultiOutputRegressor to support multi-target prediction, and the model is trained on the scaled training data.
+
+5.Prediction & Evaluation: Predictions are made on the test data, then inverse-transformed to return to original scale. The performance is evaluated using Mean Squared Error (MSE), and a sample of predicted values is displayed.
 
 ## Program:
 ```
